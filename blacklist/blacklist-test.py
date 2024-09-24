@@ -310,7 +310,7 @@ if __name__ == "__main__":
     # 定义要访问的多个URL
 
     # 定义
-    urls = read_txt_to_array('../assets/urls-daily.txt')
+    urls = read_txt_to_array('assets/urls-daily.txt')
 
     #urls = [
     #   'http://home.jundie.top:81/Cat/tv/live.txt'
