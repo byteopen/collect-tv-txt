@@ -294,12 +294,16 @@ def split_url(lines):
 
 if __name__ == "__main__":
     # 定义要访问的多个URL
-    urls = [
-        'http://home.jundie.top:81/Cat/tv/live.txt'
+
+    # 定义
+    urls = read_txt_to_array('../assets/urls-daily.txt')
+
+    #urls = [
+    #   'http://home.jundie.top:81/Cat/tv/live.txt'
         #'https://raw.githubusercontent.com/xiangjiao169/yf2025/main/yf169.txt'
         #'',
         #''
-    ]
+    #]
     for url in urls:
         print(f"处理URL: {url}")
         process_url(url)   #读取上面url清单中直播源存入urls_all_lines
