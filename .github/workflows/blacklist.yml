@@ -27,7 +27,9 @@ jobs:
         python -m pip install --upgrade pip
         
     - name: Run Python script
-      run: python blacklist/blacklist.py
+      run: |
+        cd blacklist
+        python blacklist-test.py
       
     - name: Upload generated files
       uses: actions/upload-artifact@v4
