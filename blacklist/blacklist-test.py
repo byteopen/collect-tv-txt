@@ -295,7 +295,7 @@ def split_url(lines):
 if __name__ == "__main__":
     # 定义要访问的多个URL
     urls = [
-        'https://raw.githubusercontent.com/Andreayoo/ming/main/IPTV.txt'
+        'http://home.jundie.top:81/Cat/tv/live.txt'
         #'https://raw.githubusercontent.com/xiangjiao169/yf2025/main/yf169.txt'
         #'',
         #''
