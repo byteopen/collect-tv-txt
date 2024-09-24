@@ -28,8 +28,7 @@ jobs:
         
     - name: Run Python script
       run: |
-        cd blacklist
-        python blacklist-test.py
+        python blacklist/blacklist-test.py
       
     - name: Upload generated files
       uses: actions/upload-artifact@v4
