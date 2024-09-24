@@ -34,8 +34,9 @@ jobs:
       with:
         name: generated-files
         path: |
-          merged_output.txt
-          others_output.txt
+          blacklist/blacklist_auto.txt
+          blacklist/whitelist_auto.txt
+          blacklist/whitelist_auto_tv.txt
           
     - name: Commit changes
       run: |
@@ -48,7 +49,6 @@ jobs:
           cp blacklist/blacklist_auto.txt history/blacklist/"${current_datetime}_blacklist_auto.txt"
           cp blacklist/whitelist_auto.txt history/blacklist/"${current_datetime}_whitelist_auto.txt"
           cp blacklist/whitelist_auto_tv.txt history/blacklist/"${current_datetime}_whitelist_auto_tv.txt"
-          cp others_output.txt history/"${current_datetime}_others_output.txt"
           git add history/blacklist/"${current_datetime}_blacklist_auto.txt"
           git add history/blacklist/"${current_datetime}_whitelist_auto.txt"
           git add history/blacklist/"${current_datetime}_whitelist_auto_tv.txt"
