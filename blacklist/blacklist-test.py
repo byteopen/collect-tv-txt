@@ -9,6 +9,20 @@ import subprocess #check rtmp源
 
 timestart = datetime.now()
 
+#读取文本方法
+def read_txt_to_array(file_name):
+    try:
+        with open(file_name, 'r', encoding='utf-8') as file:
+            lines = file.readlines()
+            lines = [line.strip() for line in lines]
+            return lines
+    except FileNotFoundError:
+        print(f"File '{file_name}' not found.")
+        return []
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        return []
+
 # 读取文件内容
 def read_txt_file(file_path):
     skip_strings = ['#genre#']  # 定义需要跳过的字符串数组['#', '@', '#genre#'] 
